@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		867155DF20153D6F00F34817 /* TextFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867155DE20153D6F00F34817 /* TextFieldWithButton.swift */; };
 		869752F820115744008B4F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869752F720115744008B4F6F /* AppDelegate.swift */; };
 		869752FA20115744008B4F6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869752F920115744008B4F6F /* ViewController.swift */; };
 		869752FD20115744008B4F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 869752FB20115744008B4F6F /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		867155DE20153D6F00F34817 /* TextFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithButton.swift; sourceTree = "<group>"; };
 		869752F420115744008B4F6F /* TextFieldWithButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldWithButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869752F720115744008B4F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		869752F920115744008B4F6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				869752F720115744008B4F6F /* AppDelegate.swift */,
 				869752F920115744008B4F6F /* ViewController.swift */,
+				867155DE20153D6F00F34817 /* TextFieldWithButton.swift */,
 				869752FB20115744008B4F6F /* Main.storyboard */,
 				8697530120115744008B4F6F /* Assets.xcassets */,
 				8697530320115744008B4F6F /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				869752FA20115744008B4F6F /* ViewController.swift in Sources */,
+				867155DF20153D6F00F34817 /* TextFieldWithButton.swift in Sources */,
 				869752F820115744008B4F6F /* AppDelegate.swift in Sources */,
 				8697530020115744008B4F6F /* TextFieldWithButton.xcdatamodeld in Sources */,
 			);
