@@ -35,6 +35,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="facebook-logo-button.png"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -50,4 +51,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook-logo-button.png" width="32" height="32"/>
+    </resources>
 </document>

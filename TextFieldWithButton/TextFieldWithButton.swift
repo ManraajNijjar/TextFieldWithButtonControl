@@ -19,6 +19,8 @@ class TextFieldWithButton: UIControl {
     
     var buttonFunction : (()  -> Void)!
     
+    var initialBorderColor: CGColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 0, 0, 0])!
+    
     public var targetTextField: UITextField? = nil
     
     @IBAction func doSomething(sender: UIButton, forEvent event: UIEvent){
@@ -40,6 +42,13 @@ class TextFieldWithButton: UIControl {
     }
     
     @IBInspectable
+    var borderColor: CGColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 0, 0, 0])! {
+        didSet {
+            layer.borderColor = borderColor
+        }
+    }
+    
+    @IBInspectable
     var buttonOnLeft: Bool = false {
         didSet {
             buttonSize = layer.frame.size.height * 0.8
@@ -50,10 +59,10 @@ class TextFieldWithButton: UIControl {
             }
             
             if buttonOnLeft == false {
-                button = UIButton(frame: CGRect(x: layer.frame.width - buttonSize, y: buttonDescent, width: buttonSize, height: buttonSize))
+                button = UIButton(frame: CGRect(x: layer.frame.width - (buttonSize * 1.1), y: buttonDescent, width: buttonSize, height: buttonSize))
             }
             button.layer.cornerRadius = buttonSize / 2
-            button.backgroundColor = UIColor.blue
+            //button.backgroundColor = UIColor.blue
             
             button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
             
@@ -65,15 +74,18 @@ class TextFieldWithButton: UIControl {
     @IBInspectable
     var buttonImage: UIImage? = nil {
         didSet {
-            button.imageView?.image = buttonImage
+            button.setImage(buttonImage, for: .normal)
+            print("hello")
             button.contentMode = .scaleAspectFit
         }
     }
     
     
     func updateView() {
-        textField = UITextField(frame: CGRect(x: 0, y: 0, width: frame.width - frame.height, height: frame.height))
-        layer.borderColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 0.5, 0.5, 1.0])
+        textField = UITextField(frame: CGRect(x: 0, y: 0, width: frame.width - (frame.height * 1.1), height: frame.height))
+        
+        layer.cornerRadius = 10
+        
         addSubview(textField)
         
     }
